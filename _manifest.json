@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "version": "1.0.0",
+  "name": "繁簡對應",
+  "description": "把模型回傳的繁體工具參數對到 MaiBot 內建的簡體判斷，之後的繁簡對應都加在這個插件",
+  "author": {
+    "name": "banana2556",
+    "url": "https://github.com/banana2556"
+  },
+  "license": "GPL-v3.0-or-later",
+  "urls": {
+    "repository": "https://github.com/banana2556/maibot-zh-variants"
+  },
+  "host_application": {
+    "min_version": "1.3.0",
+    "max_version": "1.3.99"
+  },
+  "sdk": {
+    "min_version": "2.0.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [],
+  "capabilities": [],
+  "i18n": {
+    "default_locale": "zh-CN"
+  },
+  "id": "banana.zh-variants"
+}
