@@ -51,3 +51,9 @@ class ZhVariantsPlugin(MaiBotPlugin):
         if isinstance(style, str):
             args["reply_style"] = canonicalize(style, REPLY_STYLES)
         return {"reply_tool_args": args}
+
+
+def create_plugin() -> ZhVariantsPlugin:
+    """插件載入器要求的工廠函式。"""
+
+    return ZhVariantsPlugin()
