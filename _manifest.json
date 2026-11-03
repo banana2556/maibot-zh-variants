@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "name": "繁簡對應",
-  "description": "把模型回傳的繁體工具參數對到 MaiBot 內建的簡體判斷，之後的繁簡對應都加在這個插件",
+  "description": "把模型回傳的繁體工具參數對到 MaiBot 內建的簡體判斷，繁體回覆改用繁體字頻產生錯字，之後的繁簡對應都加在這個插件",
   "author": {
     "name": "banana2556",
     "url": "https://github.com/banana2556"
@@ -20,7 +20,9 @@
     "max_version": "2.99.99"
   },
   "dependencies": [],
-  "capabilities": [],
+  "capabilities": [
+    "config.get"
+  ],
   "i18n": {
     "default_locale": "zh-CN"
   },
