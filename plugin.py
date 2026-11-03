@@ -42,15 +42,14 @@ class ZhVariantsPlugin(MaiBotPlugin):
         return None
 
     @HookHandler("maisaka.replyer.before_request", description="把繁體回覆風格轉成核心認得的簡體")
-    async def normalize_reply_style(self, reply_tool_args: dict[str, Any] | None = None, **kwargs: Any) -> dict[str, Any]:
+    async def normalize_reply_style(self, **kwargs: Any) -> dict[str, Any]:
         """reply 收到簡短表達、正常回覆、長回覆時，改成簡體列舉值。"""
 
-        del kwargs
-        args = dict(reply_tool_args or {})
+        args = dict(kwargs.get("reply_tool_args") or {})
         style = args.get("reply_style")
         if isinstance(style, str):
             args["reply_style"] = canonicalize(style, REPLY_STYLES)
-        return {"reply_tool_args": args}
+        return {"modified_kwargs": {**kwargs, "reply_tool_args": args}}
 
 
 def create_plugin() -> ZhVariantsPlugin:
